@@ -5,6 +5,7 @@ namespace DAL.DataAccess;
 public class DataContext : DbContext
 {
     public DataContext(DbContextOptions options) : base(options) {  }
+    public DbSet<Address> Addresses { get; set; }
     public DbSet<AddressType> AddressTypes { get; set; }
     public DbSet<City> Cities { get; set; }
     public DbSet<Country> Countries { get; set; }

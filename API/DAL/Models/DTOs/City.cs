@@ -11,6 +11,9 @@ public partial class City
     [Required, DataType("varchar(20)"), MaxLength(20)] public string PostalCode { get; set; }
     [Required, DataType("bit")] public bool IsDeleted { get; set; } = false;
 
-    [Required, ForeignKey("State")] public int State_Id { get; set; }
-    
+    public IEnumerable<State> State_Id { get; set; }
+
+    public Address Address { get; set; }
+    public TelephoneNumber TelephoneNumber { get; set; }
+
 }

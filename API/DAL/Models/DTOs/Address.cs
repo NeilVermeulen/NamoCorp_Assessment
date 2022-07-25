@@ -8,7 +8,7 @@ public partial class Address
     [Required, DataType("varchar(200)"), MaxLength(200)] public string AddressBlob { get; set; }
     [Required, DataType("bit")] public bool IsDeleted { get; set; } = false;
 
-    [Required, ForeignKey("AddressTypes")] public int AddressTypes_Id { get; set; }
-    [Required, ForeignKey("Cities")] public int Cities_Id { get; set; }
-    [Required, ForeignKey("People")] public int People_Ip { get; set; }
+    public IEnumerable<AddressType> AddressType_Id { get; set; }
+    public IEnumerable<City> City_Id { get; set; }
+    public IEnumerable<Person> Person_Id { get; set; }
 }

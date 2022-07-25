@@ -2,18 +2,16 @@ using DAL.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var config = builder.Services.BuildServiceProvider().GetRequiredService<IConfiguration>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IConfiguration>();
+
 builder.Services.AddDbContext<DataContext>(o =>
 {
-    o.UseSqlServer(config.GetConnectionString("NamoCorp"));
+    o.UseSqlServer(builder.Configuration.GetConnectionString("NamoCorp"));
 });
-
 
 var app = builder.Build();
 
@@ -26,9 +24,12 @@ if (app.Environment.IsDevelopment())
 
 #region Microservices
 
-#region Address
+#region Addresses
 
-
+app.MapGet("/AllAddresses", () =>
+{
+    return 123;
+});
 
 #endregion
 
@@ -38,37 +39,37 @@ if (app.Environment.IsDevelopment())
 
 #endregion
 
-#region City
+#region Cities
 
 
 
 #endregion
 
-#region Country
+#region Countries
 
 
 
 #endregion
 
-#region Person
+#region People
 
 
 
 #endregion
 
-#region State
+#region States
 
 
 
 #endregion
 
-#region TelephoneNumber
+#region TelephoneNumbers
 
 
 
 #endregion
 
-#region TelephoneNumberType
+#region TelephoneNumberTypes
 
 
 
