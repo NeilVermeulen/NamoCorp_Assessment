@@ -1,0 +1,12 @@
+C:\_Projects\NamoCorp_Assessment\API\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\_Projects\NamoCorp_Assessment\API\DAL\bin\Debug\net6.0\DAL.dll
+C:\_Projects\NamoCorp_Assessment\API\DAL\bin\Debug\net6.0\DAL.pdb
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.dll
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\DAL.pdb
+C:\_Projects\NamoCorp_Assessment\API\DAL\obj\Debug\net6.0\ref\DAL.dll
