@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//builder.Services.AddSingleton<ITelephoneNumberTypesCache, TelephoneNumberTypesCache>();
+
 builder.Services.AddDbContext<DataContext>(o =>
 {
     o.UseSqlServer(builder.Configuration.GetConnectionString("NamoCorp"));
@@ -26,52 +28,73 @@ if (app.Environment.IsDevelopment())
 
 #region Addresses
 
-app.MapGet("/AllAddresses", () =>
+app.MapGet("/Addresses", (DataContext db) =>
 {
-    return 123;
+    return db.Addresses.Where(a => a.IsDeleted == false).ToList();
 });
 
 #endregion
 
 #region AddressTypes
 
-
+app.MapGet("/AddressTypes", (DataContext db) =>
+{
+    return db.AddressTypes.Where(a => a.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region Cities
 
-
+app.MapGet("/Cities", (DataContext db) =>
+{
+    return db.Cities.Where(c => c.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region Countries
 
-
+app.MapGet("/Countries", (DataContext db) =>
+{
+    return db.Countries.Where(c => c.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region People
 
-
+app.MapGet("/People", (DataContext db) =>
+{
+    return db.People.Where(p => p.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region States
 
-
+app.MapGet("/States", (DataContext db) =>
+{
+    return db.States.Where(s => s.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region TelephoneNumbers
 
-
+app.MapGet("/TelephoneNumbers", (DataContext db) =>
+{
+    return db.TelephoneNumbers.Where(t => t.IsDeleted == false).ToList();
+});
 
 #endregion
 
 #region TelephoneNumberTypes
 
-
+app.MapGet("/TelephoneNumberTypes", (DataContext db) =>
+{
+    return db.TelephoneNumberTypes.Where(t => t.IsDeleted == false).ToList();
+});
 
 #endregion
 
