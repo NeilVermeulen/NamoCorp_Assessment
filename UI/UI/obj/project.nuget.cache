@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QYVjMx+NJP1d41/JClYTG6SMncKWlWoNTlOXtX0GNAP0+cHTfJnug+DFYvvXw7g+oA/M7zthsmIEpCjxrqfEjA==",
+  "success": true,
+  "projectFilePath": "C:\\_Projects\\NamoCorp_Assessment\\UI\\UI\\UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\neilo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
+  ],
+  "logs": []
+}
