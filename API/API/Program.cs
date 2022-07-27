@@ -27,6 +27,11 @@ if (app.Environment.IsDevelopment())
 
 #region Endpoints
 
+//NOT ADDING DELETE ENDPOINTS!!!
+//This is by design.  I have included a bool(bit) field in the tables called IsDeleted.
+//I switch this flag and respond to this flag in the getall methods.  This is for referential integrity.
+//Deleting should be done in the front-end by setting this flag to true.
+
 #region Addresses
 
 app.MapPost("/Addresses", async (Address obj, DataContext db) =>
